@@ -3,10 +3,11 @@ import time
 
 
 for i in range(1,10): 
-    file = open("file.txt","w")
+    file = open("file.txt","a")
     file.write("Time: %s"%time.ctime())   
+    file.close()
     os.system("git add .")
     os.system("git commit -m 'Commited'")
-    file.close()
+
     time.sleep(1)
  
