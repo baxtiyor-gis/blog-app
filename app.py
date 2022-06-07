@@ -20,7 +20,8 @@ with alive_bar(total) as bar:
             f.write(ignore[i])
         os.system("git add .")
         os.system("git commit -m 'Commited'")
-        time.sleep(0.1)
+        if i % 100 == 0:
+            os.system("git push")
         bar()
 
 os.system("git push")
